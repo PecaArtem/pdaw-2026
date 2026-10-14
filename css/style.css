@@ -124,36 +124,7 @@ footer {
 
 
 
-
-
-/* Телефоны */
-
-@media (max-width: 600px) {
-    header {
-        flex-wrap: wrap;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    nav {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        gap: 16px;
-    }
-    nav.nav-open {
-        margin-top: 16px;
-        margin-bottom: 16px;
-        display: flex;
-    }
-    .game-card img {
-        width: 60%;
-        margin: 0 auto;
-    }
-}
-/* Планшеты */
+/* Планшеты и небольшие экраны */
 @media (max-width: 900px) {
     .game-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -161,8 +132,95 @@ footer {
 }
 
 /* Телефоны */
+@media (max-width: 600px) {
+    header {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+
+        width: 100%;
+        padding: 20px;
+        background-color: #151515;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-15px);
+
+        transition:
+            opacity 0.4s ease,
+            transform 0.4s ease,
+            visibility 0s linear 0.4s;
+    }
+
+    nav.nav-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+
+        transition:
+            opacity 0.4s ease,
+            transform 0.4s ease,
+            visibility 0s;
+    }
+
+
+    .game-card img {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+/* Узкие телефоны */
 @media (max-width: 480px) {
     .game-grid {
         grid-template-columns: 1fr;
     }
+}
+
+
+.menu-toggle .material-symbols-outlined {
+    display: inline-block;
+    font-size: 32px;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle.is-open .material-symbols-outlined {
+    transform: rotate(90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .menu-toggle .material-symbols-outlined,
+    nav {
+        transition: none;
+    }
+}
+
+
+.menu-toggle {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle.is-open {
+    transform: rotate(90deg);
+}
+
+.menu-toggle .material-symbols-outlined {
+    transition: color 0.3s ease;
 }

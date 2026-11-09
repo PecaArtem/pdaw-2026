@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>FNaF Archive</title>
 </head>
 <body>
     <header>
         <a href="index.html">
-            FNaF Archive
+            FNaF <span class="red">Archive</span>
         </a>
         <button class="menu-toggle" type="button"
                 aria-label="Открыть меню"
@@ -18,7 +22,7 @@
             <span class="material-symbols-outlined">menu</span>
         </button>
         <nav>
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="games.html">Games</a>
             <a href="characters.html">Characters</a>
             <a href="story.html">Story</a>
@@ -27,55 +31,59 @@
     </header>
     <main>
             <section class="hero">
+                <div class="hero-content">
             <p class="hero-label">
-                FIVE NIGHTS AT FREDDY'S
+                FAN ARCHIVE · FNAF 1–4
             </p>
             <h1>
-                FNaF Archive
+                Five nights. <br> Four games. <br> One place.
             </h1>
-            <p class="hero-description">
-            Explore the first four games, their characters and the story behind Freddy Fazbear's Pizza.
+            <p>
+            Explore the games, characters and story of the first four Five Nights at Freddy's games.
             </p>
             <div class="hero-buttons">
                 <a href="games.html" class="button">
                     Explore Games
                 </a>
                 <a href="characters.html" class="button button-secondary">
-                    Characters
+                    Meet the characters
                 </a>
+            </div>
+        </div>
+            <div class="hero-image">
+                <img src="assets/fnaf.gif" alt="Freddy Fazbear">
             </div>
             </section>
             <section class="features-games">
                 <h2>
-                    The First Four Games
+                    The Games
                 </h2>
                 <div class="game-grid">
                     <article class="game-card">
                         <img src="assets/images/fnaf1.png" alt="Five Nights at Freddy's">
-                        <h3>Five Nights at Freddy's</h3>
-                        <p>2014</p>
-                    </article>
+                        <h3>FNAF 1</h3>
+                        <p>2014 · Freddy Fazbear's Pizza <br>Survive five nights as the night guard, watching cameras and doors.</p>                    </article>
                     <article class="game-card">
                         <img src="assets/images/fnaf2.png" alt="Five Nights at Freddy's 2">
-                        <h3>Five Nights at Freddy's 2</h3>
-                        <p>2015</p>
+                        <h3>FNAF 2</h3>
+                        <p>2014 · New pizzeria location<br> More animatronics, no doors, and a wind-up music box to keep running.</p>
                     </article>
                     <article class="game-card">
                         <img src="assets/images/fnaf3.png" alt="Five Nights at Freddy's 3">
-                        <h3>Five Nights at Freddy's 3</h3>
-                        <p>2015</p>
+                        <h3>FNAF 3</h3>
+                        <p>2015 · Fazbear's Fright<br>A horror attraction haunted by a single decayed animatronic.</p>
                     </article>
                     <article class="game-card">
                         <img src="assets/images/fnaf4.png" alt="Five Nights at Freddy's 4">
-                        <h3>Five Nights at Freddy's 4</h3>
-                        <p>2015</p>
+                        <h3>FNAF 4</h3>
+                        <p>2015 · A child's bedroom<br>Nightmare animatronics approach through doors, closet and bed.</p>
                     </article>
                 </div>
             </section>
         </main>
     <footer>
         <p>
-            FNaF Archive — Student Fan Project
+            FNaF Archive — Student Fan Project <br> By <a href="https://github.com/PecaArtem/pdaw-2026" target="_blank"><span class="red">Peca Artem</span></a>
         </p>
     </footer>
 <script src="js/script.js"></script>
